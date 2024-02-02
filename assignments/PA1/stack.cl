@@ -10,7 +10,14 @@
 class Main inherits IO {
 
    main() : Object {
-      out_string("Nothing implemented\n")
+      let i: String <- in_string() in {
+         while (not (i = "x"))
+         loop {
+            out_string(i);
+            i <- in_string();
+         } pool;
+         i; 
+      }
    };
 
 };
